@@ -1,0 +1,139 @@
+---
+                          MASENO UNIVERSITY
+       SCHOOL OF COMPUTING AND INFORMATICS 
+ Course Title: CIR 203  
+Unit: Practical Homework – Unit 1  
+Due Date: January 30, 2025  
+Student Name: TOME KISEREM  
+Admission Number: CIM|00053|023  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+Exercise 1: Financial Analytics (Banking Sector)
+Topic: Python Lists  
+Marks: 20  
+
+`python
+import numpy as np
+
+Task 1: Create 2D array for 4 branches over 6 months
+transactions = np.array([
+    [1200, 1350, 1100, 1450, 1600, 1700],
+    [1000, 1250, 1300, 1400, 1500, 1550],
+    [900, 950, 1000, 1050, 1100, 1150],
+    [1600, 1700, 1650, 1800, 1750, 1900]
+])
+
+Task 2: Total transactions per branch
+totalperbranch = np.sum(transactions, axis=1)
+
+Task 3: Branch with highest total
+highestbranch = np.argmax(totalper_branch)
+
+Task 4: Average monthly transaction volume
+average_monthly = np.mean(transactions)
+
+Task 5: Reshape to 3x8 and provide insights
+reshaped = transactions.reshape(3, 8)
+insight = "Reshaping changes the structure of the data. While useful for certain analyses, it may lose the original branch-month mapping."
+`
+
+---
+
+ Exercise 2: Logistics Management (Supply Chain Sector)
+Topic: Python Lists  
+Marks: 20  
+
+`python
+
+Task 1: List of delivery routes
+routes = ["Route A", "Route B", "Route C", "Route D", "Route E"]
+
+Task 2: Package counts
+packages = [120, 85, 150, 95, 110]
+
+Task 3: Merge into list of tuples
+route_data = list(zip(routes, packages))
+
+Task 4: Sort by package count (descending)
+sorteddata = sorted(routedata, key=lambda x: x[1], reverse=True)
+
+Task 5: Top 3 routes
+top3 = sorteddata[:3]
+`
+
+---
+
+Exercise 3: Medical Analytics (Healthcare Sector)
+Topic: Python Tuples  
+Marks: 20  
+
+`python
+
+Task 1: Patient tuple
+patient1 = ("Alice", 30, "O+")
+
+Task 2: List of 5 patient tuples
+patients = [
+    ("Alice", 30, "O+"),
+    ("Bob", 45, "A-"),
+    ("Charlie", 50, "B+"),
+    ("Diana", 28, "O+"),
+    ("Ethan", 35, "AB+")
+]
+
+Task 3: Blood type of third patient
+thirdbloodtype = patients[2][2]
+
+
+Task 4: Count of 'O+' blood type
+opluscount = sum(1 for p in patients if p[2] == "O+")
+
+Task 5: Convert to dictionary with names as keys
+patient_dict = {p[0]: p for p in patients}
+`
+
+---
+
+Exercise 4: Retail Analytics (E-commerce Sector)
+Topic: Python Sets  
+Marks: 20  
+
+`python
+
+Task 1: Product inventory dictionary
+inventory = {
+    "Laptop": 10,
+    "Phone": 25,
+    "Tablet": 15
+}
+
+Task 2: Add new product and update quantity
+inventory["Headphones"] = 20
+inventory["Phone"] += 5
+
+Task 3: Remove discontinued product
+inventory.pop("Tablet")
+
+Task 4: Common products in two warehouses
+warehouse1 = {"Laptop", "Phone", "Camera"}
+warehouse2 = {"Phone", "Laptop", "Headphones"}
+common_products = warehouse1 & warehouse2
+
+Task 5: Merge product data
+merged_inventory = inventory.copy()
+merged_inventory.update({"Camera": 5})
