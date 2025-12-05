@@ -1,0 +1,9 @@
+student_data = {
+    "Student Name": "Tome Kiserem",
+    "Admission": "CIM|00053|024",
+    "Units Scores": {
+        "CIM 207": 78,
+        "CIT 211": 69,
+        "CIR 201": 89
+    }
+}
